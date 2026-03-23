@@ -81,14 +81,22 @@ export default function Page() {
   const c = content[lang];
 
   return (
-    <main style={{ background: "#0f1a17", color: "#ffffff", fontFamily: "Arial, sans-serif" }}>
-      <nav
-        style={{
-          borderBottom: "1px solid rgba(255,255,255,.12)",
-          background: "#0f1a17",
-          position: "sticky",
-          top: 0
-        }}
+  <main
+    style={{
+      background:
+        "radial-gradient(circle at 20% 30%, #1c2a26 0%, transparent 40%), radial-gradient(circle at 80% 70%, #162723 0%, transparent 40%), #0f1a17",
+      color: "#ffffff",
+      fontFamily: "Arial, sans-serif"
+    }}
+  >
+    <nav
+      style={{
+        borderBottom: "1px solid rgba(255,255,255,.12)",
+        background: "#0f1a17",
+        position: "sticky",
+        top: 0
+      }}
+    >
       >
         <div
           style={{
