@@ -84,8 +84,8 @@ export default function Page() {
     <main style={{ background: "#0f1a17", color: "#ffffff", fontFamily: "Arial, sans-serif" }}>
       <nav
         style={{
-          borderBottom: "1px solid rgba(0,0,0,.08)",
-          background: "rgba(247,242,236,.95)",
+          borderBottom: "1px solid rgba(255,255,255,.12)",
+          background: "#0f1a17",
           position: "sticky",
           top: 0
         }}
