@@ -81,7 +81,7 @@ export default function Page() {
   const c = content[lang];
 
   return (
-    <main style={{ background: "#f7f2ec", color: "#27272a", fontFamily: "Arial, sans-serif" }}>
+    <main style={{ background: "#0f1a17", color: "#ffffff", fontFamily: "Arial, sans-serif" }}>
       <nav
         style={{
           borderBottom: "1px solid rgba(0,0,0,.08)",
