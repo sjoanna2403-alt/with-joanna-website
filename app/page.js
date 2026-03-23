@@ -68,17 +68,18 @@ export default function Page() {
 
   return (
     <main
-      style={{
-        backgroundImage:
-          "linear-gradient(rgba(8,16,14,0.75), rgba(8,16,14,0.85)), url('/watercolor-bg.jpg')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundAttachment: "fixed",
-        color: "#ffffff",
-        fontFamily: "Arial, sans-serif",
-        minHeight: "100vh"
-      }}
-    >
+  style={{
+    backgroundImage:
+      "linear-gradient(rgba(8,16,14,0.5), rgba(8,16,14,0.75)), url('/emerald-bg.jpg')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    backgroundAttachment: "fixed",
+    color: "#ffffff",
+    fontFamily: "Arial, sans-serif",
+    minHeight: "100vh"
+  }}
+>
       <nav
         style={{
           borderBottom: "1px solid rgba(212,175,55,.2)",
