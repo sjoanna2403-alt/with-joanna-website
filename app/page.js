@@ -82,13 +82,13 @@ export default function Page() {
 
   return (
   <main
-    style={{
-      background:
-        "radial-gradient(circle at 20% 30%, #1c2a26 0%, transparent 40%), radial-gradient(circle at 80% 70%, #162723 0%, transparent 40%), #0f1a17",
-      color: "#ffffff",
-      fontFamily: "Arial, sans-serif"
-    }}
-  >
+  style={{
+    background:
+      "radial-gradient(circle at 20% 30%, rgba(212,175,55,0.08) 0%, transparent 40%), radial-gradient(circle at 80% 70%, rgba(212,175,55,0.06) 0%, transparent 40%), radial-gradient(circle at 50% 50%, #1a2b27 0%, #0f1a17 100%)",
+    color: "#ffffff",
+    fontFamily: "Arial, sans-serif"
+  }}
+>
     <nav
       style={{
         borderBottom: "1px solid rgba(255,255,255,.12)",
