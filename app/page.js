@@ -3,13 +3,12 @@
 import { useState } from "react";
 
 const whatsappLink =
-  "https://wa.me/447492828818?text=Hi%20Joanna%20%F0%9F%8C%B8%20I%E2%80%99d%20like%20to%20book%20a%20treatment.";
+  "https://wa.me/447492828818?text=Hi%20Joanna%20I’d like to book a treatment.";
 
 const content = {
   en: {
     brand: "With Joanna Beauty",
     location: "Rochdale",
-    nav: ["Home", "Treatments", "Packages", "Blog", "Contact"],
     title: "Natural beauty, advanced aesthetics, real confidence.",
     text:
       "Premium skin and aesthetic treatments in Rochdale, created for women who want visible results, personal care, and an elegant experience.",
@@ -30,15 +29,36 @@ const content = {
       ["Anti-Age Premium", "from £180"],
       ["Skin Transformation Program", "from £320"]
     ],
-    blogTitle: "Blog",
-    blog: [
-      "Is RF Microneedling worth it?",
-      "Hydro Facial benefits for dull skin",
-      "How to prepare for your aesthetic appointment"
-    ],
     contactTitle: "Contact",
     contactText: "WhatsApp, Instagram, and online booking coming soon.",
     footer: "Premium skin and aesthetic treatments"
+  },
+  pl: {
+    brand: "With Joanna Beauty",
+    location: "Rochdale",
+    title: "Naturalne piękno, nowoczesna estetyka, prawdziwa pewność siebie.",
+    text:
+      "Premium zabiegi pielęgnacyjne i estetyczne w Rochdale dla kobiet, które chcą widocznych efektów, indywidualnej opieki i eleganckiego doświadczenia.",
+    book: "Umów wizytę",
+    whatsapp: "Napisz na WhatsApp",
+    treatmentsTitle: "Popularne zabiegi",
+    treatments: [
+      ["Hydro Facial", "Dogłębne oczyszczanie, nawilżenie i glow."],
+      ["RF Microneedling", "Ujędrnienie skóry i poprawa tekstury."],
+      ["PRP / PRF", "Naturalna regeneracja i odmłodzenie."],
+      ["Peelingi chemiczne", "Jaśniejszy koloryt i czystsza skóra."],
+      ["Mezoterapia", "Celowane nawilżenie i rewitalizacja."],
+      ["Botox", "Dopracowany zabieg anti-wrinkle."]
+    ],
+    packagesTitle: "Pakiety",
+    packages: [
+      ["Glow Skin Package", "od £95"],
+      ["Anti-Age Premium", "od £180"],
+      ["Skin Transformation Program", "od £320"]
+    ],
+    contactTitle: "Kontakt",
+    contactText: "WhatsApp, Instagram i rezerwacje online już w przygotowaniu.",
+    footer: "Premium zabiegi pielęgnacyjne i estetyczne"
   }
 };
 
@@ -49,17 +69,21 @@ export default function Page() {
   return (
     <main
       style={{
-        background:
-          "radial-gradient(circle at 10% 20%, rgba(212,175,55,0.18) 0%, transparent 30%), radial-gradient(circle at 85% 75%, rgba(212,175,55,0.14) 0%, transparent 30%), linear-gradient(180deg, #17322c 0%, #0b1412 100%)",
+        backgroundImage:
+          "linear-gradient(rgba(8,16,14,0.75), rgba(8,16,14,0.85)), url('/watercolor-bg.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundAttachment: "fixed",
         color: "#ffffff",
-        fontFamily: "Arial, sans-serif"
+        fontFamily: "Arial, sans-serif",
+        minHeight: "100vh"
       }}
     >
       <nav
         style={{
           borderBottom: "1px solid rgba(212,175,55,.2)",
-          background: "rgba(11,20,18,.6)",
-          backdropFilter: "blur(8px)",
+          background: "rgba(8,16,14,.4)",
+          backdropFilter: "blur(10px)",
           position: "sticky",
           top: 0
         }}
@@ -87,9 +111,9 @@ export default function Page() {
         </div>
       </nav>
 
-      <section style={{ maxWidth: 1100, margin: "0 auto", padding: "72px 24px" }}>
-        <h1 style={{ fontSize: 56 }}>{c.title}</h1>
-        <p style={{ opacity: 0.8 }}>{c.text}</p>
+      <section style={{ maxWidth: 1100, margin: "0 auto", padding: "80px 24px" }}>
+        <h1 style={{ fontSize: 52 }}>{c.title}</h1>
+        <p style={{ opacity: 0.85 }}>{c.text}</p>
 
         <div style={{ marginTop: 30 }}>
           <a
@@ -115,7 +139,7 @@ export default function Page() {
               borderRadius: 20
             }}
           >
-            WhatsApp
+            {c.whatsapp}
           </a>
         </div>
       </section>
@@ -126,7 +150,7 @@ export default function Page() {
           <div
             key={t}
             style={{
-              background: "rgba(255,255,255,.06)",
+              background: "rgba(255,255,255,.08)",
               padding: 20,
               marginBottom: 12,
               borderRadius: 20
@@ -138,7 +162,7 @@ export default function Page() {
         ))}
       </section>
 
-      <section style={{ padding: "60px 24px", background: "rgba(255,255,255,.03)" }}>
+      <section style={{ padding: "60px 24px", background: "rgba(255,255,255,.05)" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <h2>{c.packagesTitle}</h2>
           {c.packages.map(([t, p]) => (
