@@ -103,7 +103,7 @@ export default function Page() {
         >
           <div style={{ display: "flex", alignItems: "center" }}>
             <img
-              src="/logo-with-joanna.png"
+              src="/logo-with-joanna.png.png"
               alt="With Joanna Beauty"
               style={{ height: 60, width: "auto", display: "block" }}
             />
