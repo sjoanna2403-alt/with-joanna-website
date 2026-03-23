@@ -70,11 +70,8 @@ export default function Page() {
     <main
   style={{
     backgroundImage:
-      "linear-gradient(rgba(8,16,14,0.65), rgba(8,16,14,0.75)), url('/emerald-bg.jpg.avif')",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
-    backgroundAttachment: "fixed",
+      "linear-gradient(rgba(8,16,14,0.8), rgba(8,16,14,0.9)), radial-gradient(circle at 20% 30%, rgba(212,175,55,0.08) 0%, transparent 40%), radial-gradient(circle at 80% 70%, rgba(212,175,55,0.06) 0%, transparent 40%)",
+    backgroundColor: "#0f1a17",
     color: "#ffffff",
     fontFamily: "Arial, sans-serif",
     minHeight: "100vh"
