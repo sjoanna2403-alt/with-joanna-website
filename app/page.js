@@ -105,7 +105,7 @@ export default function Page() {
             <img
               src="/logo-with-joanna.png.png"
               alt="With Joanna Beauty"
-              style={{ height: 60, width: "auto", display: "block" }}
+              style={{ height: 70, width: "auto", display: "block" }}
             />
           </div>
 
