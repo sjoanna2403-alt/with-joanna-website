@@ -70,7 +70,7 @@ export default function Page() {
     <main
   style={{
     backgroundImage:
-      "linear-gradient(rgba(8,16,14,0.5), rgba(8,16,14,0.75)), url('/emerald-bg.jpg')",
+      "linear-gradient(rgba(8,16,14,0.65), rgba(8,16,14,0.75)), url('/emerald-bg.jpg.avif')",
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
