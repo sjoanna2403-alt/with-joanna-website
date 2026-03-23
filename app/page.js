@@ -97,10 +97,14 @@ export default function Page() {
           }}
         >
           <img
-            src="/logo-with-joanna.png.png"
-            alt="With Joanna"
-            style={{ height: 70 }}
-          />
+  src="/logo-with-joanna.png.png"
+  alt="With Joanna"
+  style={{
+    height: 72,
+    filter: "brightness(1.2) contrast(1.1)",
+    dropShadow: "0 0 6px rgba(212,175,55,0.4)"
+  }}
+/>
 
           <div style={{ display: "flex", gap: 8 }}>
             <button onClick={() => setLang("en")}>EN</button>
