@@ -80,15 +80,15 @@ export default function Page() {
   const [lang, setLang] = useState("en");
   const c = content[lang];
 
-  return (
+ return (
   <main
-  style={{
-    background:
-      "radial-gradient(circle at 15% 25%, rgba(212,175,55,0.12) 0%, transparent 40%), radial-gradient(circle at 85% 75%, rgba(212,175,55,0.1) 0%, transparent 40%), radial-gradient(circle at 50% 50%, #1c2f2a 0%, #0b1412 100%)",
-    color: "#ffffff",
-    fontFamily: "Arial, sans-serif"
-  }}
->
+    style={{
+      background:
+        "radial-gradient(circle at 10% 20%, rgba(212,175,55,0.25) 0%, transparent 35%), radial-gradient(circle at 90% 80%, rgba(212,175,55,0.2) 0%, transparent 35%), radial-gradient(circle at 50% 50%, #1e3a34 0%, #08100e 100%)",
+      color: "#ffffff",
+      fontFamily: "Arial, sans-serif"
+    }}
+  >
     <nav
       style={{
         borderBottom: "1px solid rgba(255,255,255,.12)",
