@@ -82,45 +82,123 @@ export default function Page() {
 
   return (
     <main style={{ background: "#f7f2ec", color: "#27272a", fontFamily: "Arial, sans-serif" }}>
-      <nav style={{ borderBottom: "1px solid rgba(0,0,0,.08)", background: "rgba(247,242,236,.95)", position: "sticky", top: 0 }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto", padding: "18px 24px", display: "flex", justifyContent: "space-between", alignItems: "center", gap: 16 }}>
-          <div>
-            <div style={{ fontWeight: 700, fontSize: 22 }}>{c.brand}</div>
-            <div style={{ fontSize: 11, letterSpacing: ".22em", textTransform: "uppercase", color: "#6b7280", marginTop: 4 }}>{c.location}</div>
+      <nav
+        style={{
+          borderBottom: "1px solid rgba(0,0,0,.08)",
+          background: "rgba(247,242,236,.95)",
+          position: "sticky",
+          top: 0
+        }}
+      >
+        <div
+          style={{
+            maxWidth: 1100,
+            margin: "0 auto",
+            padding: "18px 24px",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            gap: 16
+          }}
+        >
+          <div style={{ display: "flex", alignItems: "center" }}>
+            <img
+              src="/logo-with-joanna.png"
+              alt="With Joanna Beauty"
+              style={{ height: 60, width: "auto", display: "block" }}
+            />
           </div>
+
           <div style={{ display: "flex", gap: 8 }}>
-            <button onClick={() => setLang("en")} style={{ border: 0, borderRadius: 999, padding: "8px 12px", background: lang === "en" ? "#111" : "#fff", color: lang === "en" ? "#fff" : "#111" }}>EN</button>
-            <button onClick={() => setLang("pl")} style={{ border: 0, borderRadius: 999, padding: "8px 12px", background: lang === "pl" ? "#111" : "#fff", color: lang === "pl" ? "#fff" : "#111" }}>PL</button>
+            <button
+              onClick={() => setLang("en")}
+              style={{
+                border: 0,
+                borderRadius: 999,
+                padding: "8px 12px",
+                background: lang === "en" ? "#111" : "#fff",
+                color: lang === "en" ? "#fff" : "#111"
+              }}
+            >
+              EN
+            </button>
+            <button
+              onClick={() => setLang("pl")}
+              style={{
+                border: 0,
+                borderRadius: 999,
+                padding: "8px 12px",
+                background: lang === "pl" ? "#111" : "#fff",
+                color: lang === "pl" ? "#fff" : "#111"
+              }}
+            >
+              PL
+            </button>
           </div>
         </div>
       </nav>
 
       <section style={{ maxWidth: 1100, margin: "0 auto", padding: "72px 24px" }}>
-        <div style={{ display: "inline-block", border: "1px solid rgba(139,106,66,.28)", borderRadius: 999, padding: "10px 16px", fontSize: 11, textTransform: "uppercase", letterSpacing: ".22em", background: "rgba(255,255,255,.8)" }}>
+        <div
+          style={{
+            display: "inline-block",
+            border: "1px solid rgba(139,106,66,.28)",
+            borderRadius: 999,
+            padding: "10px 16px",
+            fontSize: 11,
+            textTransform: "uppercase",
+            letterSpacing: ".22em",
+            background: "rgba(255,255,255,.8)"
+          }}
+        >
           With Joanna Beauty
         </div>
-        <h1 style={{ fontFamily: "Georgia, serif", fontWeight: 400, fontSize: 56, lineHeight: 1.08, maxWidth: 760, marginTop: 20 }}>
+        <h1
+          style={{
+            fontFamily: "Georgia, serif",
+            fontWeight: 400,
+            fontSize: 56,
+            lineHeight: 1.08,
+            maxWidth: 760,
+            marginTop: 20
+          }}
+        >
           {c.title}
         </h1>
         <p style={{ color: "#6b7280", fontSize: 18, lineHeight: 1.8, maxWidth: 760 }}>
           {c.text}
         </p>
         <div style={{ display: "flex", gap: 14, flexWrap: "wrap", marginTop: 28 }}>
-          <a href="#contact" style={{ borderRadius: 18, padding: "14px 22px", background: "#111", color: "#fff", fontWeight: 700 }}>
+          <a
+            href="#contact"
+            style={{ borderRadius: 18, padding: "14px 22px", background: "#111", color: "#fff", fontWeight: 700 }}
+          >
             {c.book}
           </a>
-          <a href={whatsappLink} target="_blank" rel="noreferrer" style={{ borderRadius: 18, padding: "14px 22px", border: "1px solid #111", color: "#111", fontWeight: 700 }}>
+          <a
+            href={whatsappLink}
+            target="_blank"
+            rel="noreferrer"
+            style={{ borderRadius: 18, padding: "14px 22px", border: "1px solid #111", color: "#111", fontWeight: 700 }}
+          >
             {c.whatsapp}
           </a>
         </div>
       </section>
 
       <section style={{ maxWidth: 1100, margin: "0 auto", padding: "0 24px 72px" }}>
-        <h2 style={{ fontFamily: "Georgia, serif", fontWeight: 400, fontSize: 40 }}>{c.treatmentsTitle}</h2>
+        <h2 style={{ fontFamily: "Georgia, serif", fontWeight: 400, fontSize: 40 }}>
+          {c.treatmentsTitle}
+        </h2>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(240px,1fr))", gap: 18 }}>
           {c.treatments.map(([title, desc]) => (
-            <div key={title} style={{ background: "#fff", borderRadius: 24, padding: 22, boxShadow: "0 8px 24px rgba(0,0,0,.05)" }}>
-              <h3 style={{ fontFamily: "Georgia, serif", fontWeight: 400, fontSize: 26, marginTop: 0 }}>{title}</h3>
+            <div
+              key={title}
+              style={{ background: "#fff", borderRadius: 24, padding: 22, boxShadow: "0 8px 24px rgba(0,0,0,.05)" }}
+            >
+              <h3 style={{ fontFamily: "Georgia, serif", fontWeight: 400, fontSize: 26, marginTop: 0 }}>
+                {title}
+              </h3>
               <p style={{ color: "#6b7280", lineHeight: 1.8, marginBottom: 0 }}>{desc}</p>
             </div>
           ))}
@@ -129,11 +207,18 @@ export default function Page() {
 
       <section style={{ background: "rgba(255,255,255,.72)", padding: "72px 0" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 24px" }}>
-          <h2 style={{ fontFamily: "Georgia, serif", fontWeight: 400, fontSize: 40 }}>{c.packagesTitle}</h2>
+          <h2 style={{ fontFamily: "Georgia, serif", fontWeight: 400, fontSize: 40 }}>
+            {c.packagesTitle}
+          </h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(240px,1fr))", gap: 18 }}>
             {c.packages.map(([title, price]) => (
-              <div key={title} style={{ background: "#fff", borderRadius: 24, padding: 22, boxShadow: "0 8px 24px rgba(0,0,0,.05)" }}>
-                <h3 style={{ fontFamily: "Georgia, serif", fontWeight: 400, fontSize: 26, marginTop: 0 }}>{title}</h3>
+              <div
+                key={title}
+                style={{ background: "#fff", borderRadius: 24, padding: 22, boxShadow: "0 8px 24px rgba(0,0,0,.05)" }}
+              >
+                <h3 style={{ fontFamily: "Georgia, serif", fontWeight: 400, fontSize: 26, marginTop: 0 }}>
+                  {title}
+                </h3>
                 <p style={{ color: "#8b6a42", fontWeight: 700, marginBottom: 0 }}>{price}</p>
               </div>
             ))}
@@ -142,11 +227,18 @@ export default function Page() {
       </section>
 
       <section style={{ maxWidth: 1100, margin: "0 auto", padding: "72px 24px" }}>
-        <h2 style={{ fontFamily: "Georgia, serif", fontWeight: 400, fontSize: 40 }}>{c.blogTitle}</h2>
+        <h2 style={{ fontFamily: "Georgia, serif", fontWeight: 400, fontSize: 40 }}>
+          {c.blogTitle}
+        </h2>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(240px,1fr))", gap: 18 }}>
           {c.blog.map((title) => (
-            <div key={title} style={{ background: "#fff", borderRadius: 24, padding: 22, boxShadow: "0 8px 24px rgba(0,0,0,.05)" }}>
-              <h3 style={{ fontFamily: "Georgia, serif", fontWeight: 400, fontSize: 24, marginTop: 0 }}>{title}</h3>
+            <div
+              key={title}
+              style={{ background: "#fff", borderRadius: 24, padding: 22, boxShadow: "0 8px 24px rgba(0,0,0,.05)" }}
+            >
+              <h3 style={{ fontFamily: "Georgia, serif", fontWeight: 400, fontSize: 24, marginTop: 0 }}>
+                {title}
+              </h3>
             </div>
           ))}
         </div>
@@ -154,13 +246,33 @@ export default function Page() {
 
       <section id="contact" style={{ background: "#1d1a17", color: "#fff", padding: "72px 24px" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <h2 style={{ fontFamily: "Georgia, serif", fontWeight: 400, fontSize: 40 }}>{c.contactTitle}</h2>
-          <p style={{ color: "rgba(255,255,255,.75)", lineHeight: 1.8, maxWidth: 760 }}>{c.contactText}</p>
+          <h2 style={{ fontFamily: "Georgia, serif", fontWeight: 400, fontSize: 40 }}>
+            {c.contactTitle}
+          </h2>
+          <p style={{ color: "rgba(255,255,255,.75)", lineHeight: 1.8, maxWidth: 760 }}>
+            {c.contactText}
+          </p>
           <div style={{ display: "flex", gap: 14, flexWrap: "wrap", marginTop: 24 }}>
-            <a href={whatsappLink} target="_blank" rel="noreferrer" style={{ borderRadius: 18, padding: "14px 22px", background: "#fff", color: "#111", fontWeight: 700 }}>
+            <a
+              href={whatsappLink}
+              target="_blank"
+              rel="noreferrer"
+              style={{ borderRadius: 18, padding: "14px 22px", background: "#fff", color: "#111", fontWeight: 700 }}
+            >
               WhatsApp
             </a>
-            <a href="https://www.instagram.com/with_joanna20/" target="_blank" rel="noreferrer" style={{ borderRadius: 18, padding: "14px 22px", border: "1px solid rgba(255,255,255,.3)", color: "#fff", fontWeight: 700 }}>
+            <a
+              href="https://www.instagram.com/with_joanna20/"
+              target="_blank"
+              rel="noreferrer"
+              style={{
+                borderRadius: 18,
+                padding: "14px 22px",
+                border: "1px solid rgba(255,255,255,.3)",
+                color: "#fff",
+                fontWeight: 700
+              }}
+            >
               Instagram
             </a>
           </div>
@@ -168,10 +280,21 @@ export default function Page() {
       </section>
 
       <footer style={{ borderTop: "1px solid rgba(0,0,0,.06)", padding: "28px 24px", background: "#f7f2ec" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto", display: "flex", justifyContent: "space-between", gap: 16, flexWrap: "wrap" }}>
+        <div
+          style={{
+            maxWidth: 1100,
+            margin: "0 auto",
+            display: "flex",
+            justifyContent: "space-between",
+            gap: 16,
+            flexWrap: "wrap"
+          }}
+        >
           <div>
             <div style={{ fontWeight: 700, fontSize: 18 }}>{c.brand}</div>
-            <div style={{ color: "#6b7280", marginTop: 6 }}>{c.location} • {c.footer}</div>
+            <div style={{ color: "#6b7280", marginTop: 6 }}>
+              {c.location} • {c.footer}
+            </div>
           </div>
         </div>
       </footer>
