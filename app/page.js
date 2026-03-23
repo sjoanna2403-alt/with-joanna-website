@@ -84,7 +84,7 @@ export default function Page() {
   <main
   style={{
     background:
-      "radial-gradient(circle at 20% 30%, rgba(212,175,55,0.08) 0%, transparent 40%), radial-gradient(circle at 80% 70%, rgba(212,175,55,0.06) 0%, transparent 40%), radial-gradient(circle at 50% 50%, #1a2b27 0%, #0f1a17 100%)",
+      "radial-gradient(circle at 15% 25%, rgba(212,175,55,0.12) 0%, transparent 40%), radial-gradient(circle at 85% 75%, rgba(212,175,55,0.1) 0%, transparent 40%), radial-gradient(circle at 50% 50%, #1c2f2a 0%, #0b1412 100%)",
     color: "#ffffff",
     fontFamily: "Arial, sans-serif"
   }}
