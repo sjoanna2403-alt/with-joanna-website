@@ -66,17 +66,17 @@ export default function Page() {
   const [lang, setLang] = useState("en");
   const c = content[lang];
 
-  return (
-    <main
-  style={{
-    backgroundImage:
-      "linear-gradient(rgba(8,16,14,0.8), rgba(8,16,14,0.9)), radial-gradient(circle at 20% 30%, rgba(212,175,55,0.08) 0%, transparent 40%), radial-gradient(circle at 80% 70%, rgba(212,175,55,0.06) 0%, transparent 40%)",
-    backgroundColor: "#0f1a17",
-    color: "#ffffff",
-    fontFamily: "Arial, sans-serif",
-    minHeight: "100vh"
-  }}
->
+ return (
+  <main
+    style={{
+      backgroundImage:
+        "linear-gradient(rgba(8,16,14,0.8), rgba(8,16,14,0.9)), radial-gradient(circle at 20% 30%, rgba(212,175,55,0.08) 0%, transparent 40%), radial-gradient(circle at 80% 70%, rgba(212,175,55,0.06) 0%, transparent 40%)",
+      backgroundColor: "#0f1a17",
+      color: "#ffffff",
+      fontFamily: "Arial, sans-serif",
+      minHeight: "100vh"
+    }}
+  >
       <nav
         style={{
           borderBottom: "1px solid rgba(212,175,55,.2)",
@@ -101,8 +101,7 @@ export default function Page() {
   alt="With Joanna"
   style={{
     height: 72,
-    filter: "brightness(1.2) contrast(1.1)",
-    dropShadow: "0 0 6px rgba(212,175,55,0.4)"
+    filter: "brightness(1.2) contrast(1.1) drop-shadow(0 0 6px rgba(212,175,55,0.4))"
   }}
 />
 
