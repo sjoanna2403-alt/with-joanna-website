@@ -1,9 +1,14 @@
 :root {
-  --bg: #f7f2ec;
-  --text: #27272a;
+  --green-dark: #071f18;
+  --green-luxury: #0b2f24;
+  --gold-soft: #c9a961;
+  --gold-light: #e4c98a;
+  --cream: #f7f1e5;
 }
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -12,17 +17,58 @@ html {
 }
 
 body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(201, 169, 97, 0.18), transparent 35%),
+    radial-gradient(circle at bottom right, rgba(201, 169, 97, 0.10), transparent 30%),
+    linear-gradient(135deg, #071f18 0%, #0b2f24 45%, #03120e 100%);
+color: var(--cream);
+  min-height: 100vh;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+section,
+.card,
+.treatment-card {
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(201, 169, 97, 0.22);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
+  border-radius: 24px;
+}
+button,
+.btn-primary {
+  background: linear-gradient(135deg, #c9a961, #e4c98a);
+  color: #071f18;
+  border: none;
+  border-radius: 999px;
+  padding: 14px 28px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(201, 169, 97, 0.25);
+  cursor: pointer;
 }
 
-button {
-  font: inherit;
+button:hover,
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgba(201, 169, 97, 0.35);
+}
+
+a {
+  color: var(--gold-light);
+  text-decoration: none;
+  }
+
+h1,
+h2,
+h3,
+h4 {
+  color: #f8f4ea;
+  letter-spacing: 0.5px;
+}
+
+p {
+  color: rgba(247, 241, 229, 0.88);
+  line-height: 1.7;
 }
