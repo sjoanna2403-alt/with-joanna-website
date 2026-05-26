@@ -216,13 +216,14 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <section
-        style={{
-          maxWidth: 1100,
-          margin: "0 auto",
-          padding: "0 24px 80px"
-        }}
-      >
+     <section
+  id="treatments"
+  style={{
+    maxWidth: 1100,
+    margin: "0 auto",
+    padding: "0 24px 80px"
+  }}
+>
         <h2
           style={{
             fontFamily: "Georgia, serif",
