@@ -1,4 +1,59 @@
+"use client";
+
+import { useState } from "react";
+
 export default function Home() {
+  const [lang, setLang] = useState("en");
+
+  const t = {
+    en: {
+      home: "Home",
+      about: "About",
+      treatments: "Treatments",
+      nutrition: "Nutrition",
+      packages: "Packages",
+      faq: "FAQ",
+      contact: "Contact",
+      heroTitle: "Natural Beauty. Advanced Aesthetics. Personal Care.",
+      heroText:
+        "Premium aesthetic treatments, skin health and nutrition support designed around your natural confidence.",
+      consultation: "Book Consultation",
+      whatsapp: "WhatsApp",
+      aboutTitle: "About Joanna",
+      aboutText:
+        "With Joanna Beauty combines aesthetic care, skin health and wellness support in a calm, professional and personalised way.",
+      treatmentsTitle: "Treatments",
+      nutritionTitle: "Nutrition & Wellness",
+      packagesTitle: "Packages",
+      faqTitle: "FAQ",
+      contactTitle: "Book Your Consultation"
+    },
+    pl: {
+      home: "Start",
+      about: "O mnie",
+      treatments: "Zabiegi",
+      nutrition: "Dietetyka",
+      packages: "Pakiety",
+      faq: "FAQ",
+      contact: "Kontakt",
+      heroTitle: "Naturalne piękno. Nowoczesna estetyka. Indywidualna opieka.",
+      heroText:
+        "Premium zabiegi estetyczne, pielęgnacja skóry i wsparcie dietetyczne dopasowane do Twojej naturalnej pewności siebie.",
+      consultation: "Umów konsultację",
+      whatsapp: "WhatsApp",
+      aboutTitle: "O Joannie",
+      aboutText:
+        "With Joanna Beauty łączy medycynę estetyczną, zdrowie skóry i wsparcie wellness w spokojny, profesjonalny i indywidualny sposób.",
+      treatmentsTitle: "Zabiegi",
+      nutritionTitle: "Dietetyka i wellness",
+      packagesTitle: "Pakiety",
+      faqTitle: "FAQ",
+      contactTitle: "Umów konsultację"
+    }
+  };
+
+  const c = t[lang];
+
   return (
     <main
       style={{
@@ -8,347 +63,100 @@ export default function Home() {
         color: "#f8f4ea",
         fontFamily: "Arial, sans-serif"
       }}
-<nav
-  style={{
-    maxWidth: 1100,
-    margin: "0 auto",
-    padding: "24px",
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    flexWrap: "wrap",
-    gap: 16
-  }}
->
-  <strong style={{ color: "#d4af37", fontSize: 20 }}>
-    With Joanna Beauty
-  </strong>
-
-  <div style={{ display: "flex", gap: 18, flexWrap: "wrap" }}>
-    <a href="#about">About</a>
-    <a href="#treatments">Treatments</a>
-    <a href="#nutrition">Nutrition</a>
-    <a href="#packages">Packages</a>
-    <a href="#faq">FAQ</a>
-    <a href="#contact">Contact</a>
-  </div>
-</nav>    
->
-    
-      <section
+    >
+      <nav
         style={{
           maxWidth: 1100,
-          margin: "40px auto",
-          padding: "110px 40px 100px",
-          borderRadius: 36,
-          background:
-            "linear-gradient(135deg, rgba(7,31,24,0.96), rgba(11,47,36,0.92))",
-          border: "1px solid rgba(212,175,55,.18)",
-          boxShadow: "0 30px 80px rgba(0,0,0,.35)"
+          margin: "0 auto",
+          padding: "24px",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          flexWrap: "wrap",
+          gap: 16
         }}
       >
-        <div
-          style={{
-            display: "inline-block",
-            border: "1px solid rgba(212,175,55,.28)",
-            borderRadius: 999,
-            padding: "10px 16px",
-            fontSize: 11,
-            textTransform: "uppercase",
-            letterSpacing: ".22em",
-            background: "rgba(255,255,255,.04)"
-          }}
-        >
+        <strong style={{ color: "#d4af37", fontSize: 20 }}>
           With Joanna Beauty
-        </div>
+        </strong>
 
-        <h1
-          style={{
-            fontFamily: "Georgia, serif",
-            fontWeight: 400,
-            fontSize: 64,
-            lineHeight: 1.05,
-            maxWidth: 760,
-            marginTop: 24,
-            marginBottom: 22
-          }}
-        >
-          Natural Beauty. Advanced Aesthetics. Personal Care. / Naturalne piękno. Nowoczesna estetyka. Indywidualna opieka.
+        <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
+          <a href="#home">{c.home}</a>
+          <a href="#about">{c.about}</a>
+          <a href="#treatments">{c.treatments}</a>
+          <a href="#nutrition">{c.nutrition}</a>
+          <a href="#packages">{c.packages}</a>
+          <a href="#faq">{c.faq}</a>
+          <a href="#contact">{c.contact}</a>
+          <button onClick={() => setLang(lang === "en" ? "pl" : "en")}>
+            {lang === "en" ? "PL" : "EN"}
+          </button>
+        </div>
+      </nav>
+
+      <section id="home" style={{ maxWidth: 1100, margin: "40px auto", padding: "90px 40px" }}>
+        <p style={{ color: "#d4af37", letterSpacing: ".2em" }}>
+          WITH JOANNA BEAUTY
+        </p>
+
+        <h1 style={{ fontFamily: "Georgia, serif", fontSize: 58, maxWidth: 850 }}>
+          {c.heroTitle}
         </h1>
 
-        <p
-          style={{
-            color: "rgba(255,255,255,.78)",
-            fontSize: 20,
-            lineHeight: 1.8,
-            maxWidth: 760
-          }}
-        >
-          Premium aesthetic treatments, wellness and personalised beauty care
-          designed around your natural confidence.
+        <p style={{ fontSize: 20, lineHeight: 1.8, maxWidth: 760 }}>
+          {c.heroText}
         </p>
 
-        <div
-          style={{
-            display: "flex",
-            gap: 16,
-            flexWrap: "wrap",
-            marginTop: 34
-          }}
-        >
-          <a
-            href="#contact"
-            style={{
-              borderRadius: 18,
-              padding: "16px 28px",
-              background: "#d4af37",
-              color: "#111",
-              fontWeight: 700,
-              textDecoration: "none"
-            }}
-          >
-            Book Consultation
-          </a>
-
-          <a
-            href="https://wa.me/"
-            target="_blank"
-            rel="noreferrer"
-            style={{
-              borderRadius: 18,
-              padding: "16px 28px",
-              border: "1px solid rgba(212,175,55,.4)",
-              color: "#fff",
-              fontWeight: 700,
-              textDecoration: "none",
-              background: "rgba(255,255,255,.04)"
-            }}
-          >
-            WhatsApp
+        <div style={{ display: "flex", gap: 16, marginTop: 30 }}>
+          <a href="#contact">{c.consultation}</a>
+          <a href="https://wa.me/" target="_blank" rel="noreferrer">
+            {c.whatsapp}
           </a>
         </div>
       </section>
 
-      <section
-        style={{
-          maxWidth: 1100,
-          margin: "0 auto",
-          padding: "0 24px 80px"
-        }}
-      >
-        <h2
-          style={{
-            fontFamily: "Georgia, serif",
-            fontWeight: 400,
-            fontSize: 42,
-            marginBottom: 28
-          }}
-        >
-          Treatments
-        </h2>
-
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit,minmax(260px,1fr))",
-            gap: 24
-          }}
-        >
-          {[
-            "Skin Boosters",
-            "Vitamin Injections",
-            "Facials",
-            "Wellness & Nutrition"
-          ].map((item) => (
-            <div
-              key={item}
-              style={{
-                background: "rgba(255,255,255,.05)",
-                border: "1px solid rgba(212,175,55,.16)",
-                borderRadius: 24,
-                padding: 28,
-                backdropFilter: "blur(12px)"
-              }}
-            >
-          <div
-  style={{
-    width: 54,
-    height: 54,
-    borderRadius: "50%",
-    background: "rgba(212,175,55,.14)",
-    marginBottom: 20,
-    border: "1px solid rgba(212,175,55,.2)"
-  }}
-/>
-
-<h3
-  style={{
-    marginBottom: 12,
-    fontSize: 26,
-    fontWeight: 500,
-    fontFamily: "Georgia, serif"
-  }}
->
-  {item}
-</h3>
-
-<p
-  style={{
-    color: "rgba(255,255,255,.72)",
-    lineHeight: 1.8,
-    marginBottom: 18
-  }}
->
-  Premium personalised treatments focused on natural beauty, skin health
-  and confidence.
-</p>
-
-<div
-  style={{
-    color: "#d4af37",
-    fontWeight: 700,
-    letterSpacing: ".04em"
-  }}
->
-  From £99
-</div>
-            </div>
-          ))}
-        </div>
-      </section>
-     <section
-  id="treatments"
-  style={{
-    maxWidth: 1100,
-    margin: "0 auto",
-    padding: "0 24px 80px"
-  }}
->
-        <h2
-          style={{
-            fontFamily: "Georgia, serif",
-            fontWeight: 400,
-            fontSize: 42,
-            marginBottom: 18
-          }}
-        >
-          Why Choose With Joanna
-        </h2>
-
-        <p
-          style={{
-            color: "rgba(255,255,255,.72)",
-            fontSize: 18,
-            lineHeight: 1.8,
-            maxWidth: 760,
-            marginBottom: 34
-          }}
-        >
-          A calm, professional and personalised approach to aesthetic treatments,
-          skin health and nutrition support — created to help you feel confident,
-          balanced and cared for.
-        </p>
-
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit,minmax(240px,1fr))",
-            gap: 22
-          }}
-        >
-          {[
-            "Personalised treatment plans",
-            "Natural-looking aesthetic results",
-            "Skin health & wellness focus",
-            "Nutrition-led confidence support"
-          ].map((item) => (
-            <div
-              key={item}
-              style={{
-                background: "rgba(255,255,255,.045)",
-                border: "1px solid rgba(212,175,55,.16)",
-                borderRadius: 24,
-                padding: 26
-              }}
-            >
-              <div
-                style={{
-                  width: 42,
-                  height: 42,
-                  borderRadius: "50%",
-                  background: "rgba(212,175,55,.16)",
-                  marginBottom: 18
-                }}
-              />
-
-              <h3
-                style={{
-                  fontSize: 20,
-                  fontWeight: 500,
-                  lineHeight: 1.4
-                }}
-              >
-                {item}
-              </h3>
-            </div>
-          ))}
-        </div>
-      </section>
-      <section
-        id="contact"
-        style={{
-          maxWidth: 1100,
-          margin: "0 auto",
-          padding: "0 24px 100px"
-        }}
-      >
-        <div
-          style={{
-            borderRadius: 30,
-            padding: "50px 40px",
-            background: "rgba(255,255,255,.05)",
-            border: "1px solid rgba(212,175,55,.18)"
-          }}
-        >
-          <h2
-            style={{
-              fontFamily: "Georgia, serif",
-              fontSize: 42,
-              fontWeight: 400,
-              marginBottom: 18
-            }}
-          >
-            Book Your Consultation
-          </h2>
-
-          <p
-            style={{
-              color: "rgba(255,255,255,.75)",
-              lineHeight: 1.8,
-              marginBottom: 28
-            }}
-          >
-            Get in touch to book your consultation or ask about treatments.
-          </p>
-
-          <a
-            href="https://wa.me/"
-            target="_blank"
-            rel="noreferrer"
-            style={{
-              display: "inline-block",
-              borderRadius: 18,
-              padding: "16px 28px",
-              background: "#d4af37",
-              color: "#111",
-              fontWeight: 700,
-              textDecoration: "none"
-            }}
-          >
-            Message on WhatsApp
-          </a>
-        </div>
-      </section>
+      <Section id="about" title={c.aboutTitle} text={c.aboutText} />
+      <Cards id="treatments" title={c.treatmentsTitle} items={["Skin Boosters", "Vitamin Injections", "Facials", "Aesthetic Treatments"]} />
+      <Cards id="nutrition" title={c.nutritionTitle} items={["Nutrition Consultation", "Wellness Support", "Healthy Lifestyle Plan"]} />
+      <Cards id="packages" title={c.packagesTitle} items={["Glow Package", "Skin & Wellness Package", "Confidence Package"]} />
+      <Section id="faq" title={c.faqTitle} text="More information coming soon." />
+      <Section id="contact" title={c.contactTitle} text="Contact via WhatsApp to ask a question or arrange a consultation." />
     </main>
+  );
+}
+
+function Section({ id, title, text }) {
+  return (
+    <section id={id} style={{ maxWidth: 1100, margin: "0 auto", padding: "60px 24px" }}>
+      <h2 style={{ fontFamily: "Georgia, serif", fontSize: 42 }}>{title}</h2>
+      <p style={{ fontSize: 18, lineHeight: 1.8, maxWidth: 760 }}>{text}</p>
+    </section>
+  );
+}
+
+function Cards({ id, title, items }) {
+  return (
+    <section id={id} style={{ maxWidth: 1100, margin: "0 auto", padding: "60px 24px" }}>
+      <h2 style={{ fontFamily: "Georgia, serif", fontSize: 42 }}>{title}</h2>
+
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(240px,1fr))", gap: 22 }}>
+        {items.map((item) => (
+          <div
+            key={item}
+            style={{
+              background: "rgba(255,255,255,.05)",
+              border: "1px solid rgba(212,175,55,.18)",
+              borderRadius: 24,
+              padding: 28
+            }}
+          >
+            <h3>{item}</h3>
+            <p style={{ color: "rgba(255,255,255,.72)", lineHeight: 1.7 }}>
+              Personalised support designed around your goals.
+            </p>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 }
