@@ -7,7 +7,7 @@ const whatsappLink =
 
 const content = {
   en: {
-    brand: "With Joanna Beauty",
+    brand: "With Joanna Beauty TEST",
     location: "Rochdale",
     title: "Natural beauty, advanced aesthetics, real confidence.",
     text:
