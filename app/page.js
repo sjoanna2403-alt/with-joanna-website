@@ -260,7 +260,53 @@ export default function Home() {
   </div>
 </section>
       <Cards id="packages" title={c.packagesTitle} items={["Glow Package", "Skin & Wellness Package", "Confidence Package"]} />
-      <Section id="faq" title={c.faqTitle} text="More information coming soon." />
+      <section id="faq" style={{ maxWidth: 1100, margin: "0 auto", padding: "60px 24px" }}>
+  <h2 style={{ fontFamily: "Georgia, serif", fontSize: 42 }}>
+    FAQ
+  </h2>
+
+  {[
+    [
+      "How many treatments will I need?",
+      "Every client is different, which is why treatment plans are always personalised. Some clients notice visible improvements after just one session, while others may benefit from a course of treatments depending on their skin goals, concerns and desired results."
+    ],
+    [
+      "Is there downtime?",
+      "Downtime depends on the treatment chosen. Many treatments involve little to no downtime, while more advanced procedures such as RF Microneedling or PRP may require a short recovery period. Full aftercare guidance is always provided to support healing and results."
+    ],
+    [
+      "Are consultations available?",
+      "Yes — consultations are available to discuss your goals, skin concerns and the most suitable treatment options for you. A personalised approach is always taken to ensure treatments are safe, comfortable and tailored to your individual needs."
+    ],
+    [
+      "Are treatments personalised?",
+      "Absolutely. Every treatment is tailored to your skin type, concerns and desired outcome. The focus is always on natural-looking, balanced results that help you feel confident and comfortable in your own skin."
+    ],
+    [
+      "Can treatments support skin confidence & wellness?",
+      "Yes — the approach at With Joanna Beauty combines aesthetics with holistic wellbeing. Treatments are designed not only to improve the appearance of the skin, but also to support confidence, self-care and overall wellbeing."
+    ]
+  ].map(([question, answer]) => (
+    <div
+      key={question}
+      style={{
+        background: "rgba(255,255,255,.05)",
+        border: "1px solid rgba(212,175,55,.18)",
+        borderRadius: 24,
+        padding: 28,
+        marginTop: 22
+      }}
+    >
+      <h3 style={{ fontSize: 22, marginBottom: 12 }}>
+        {question}
+      </h3>
+
+      <p style={{ color: "rgba(255,255,255,.72)", lineHeight: 1.8 }}>
+        {answer}
+      </p>
+    </div>
+  ))}
+</section>
       <Section id="contact" title={c.contactTitle} text="Contact via WhatsApp to ask a question or arrange a consultation." />
     </main>
   );
