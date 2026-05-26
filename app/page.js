@@ -167,7 +167,83 @@ export default function Home() {
           ))}
         </div>
       </section>
+      <section
+        style={{
+          maxWidth: 1100,
+          margin: "0 auto",
+          padding: "0 24px 80px"
+        }}
+      >
+        <h2
+          style={{
+            fontFamily: "Georgia, serif",
+            fontWeight: 400,
+            fontSize: 42,
+            marginBottom: 18
+          }}
+        >
+          Why Choose With Joanna
+        </h2>
 
+        <p
+          style={{
+            color: "rgba(255,255,255,.72)",
+            fontSize: 18,
+            lineHeight: 1.8,
+            maxWidth: 760,
+            marginBottom: 34
+          }}
+        >
+          A calm, professional and personalised approach to aesthetic treatments,
+          skin health and nutrition support — created to help you feel confident,
+          balanced and cared for.
+        </p>
+
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit,minmax(240px,1fr))",
+            gap: 22
+          }}
+        >
+          {[
+            "Personalised treatment plans",
+            "Natural-looking aesthetic results",
+            "Skin health & wellness focus",
+            "Nutrition-led confidence support"
+          ].map((item) => (
+            <div
+              key={item}
+              style={{
+                background: "rgba(255,255,255,.045)",
+                border: "1px solid rgba(212,175,55,.16)",
+                borderRadius: 24,
+                padding: 26
+              }}
+            >
+              <div
+                style={{
+                  width: 42,
+                  height: 42,
+                  borderRadius: "50%",
+                  background: "rgba(212,175,55,.16)",
+                  marginBottom: 18
+                }}
+              />
+
+              <h3
+                style={{
+                  fontSize: 20,
+                  fontWeight: 500,
+                  lineHeight: 1.4
+                }}
+              >
+                {item}
+              </h3>
+            </div>
+          ))}
+        </div>
+      </section>
       <section
         id="contact"
         style={{
