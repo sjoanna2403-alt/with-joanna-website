@@ -116,7 +116,7 @@ export default function Home() {
       </section>
 
       <Section id="about" title={c.aboutTitle} text={c.aboutText} />
-      <Cards id="treatments" title={c.treatmentsTitle} items={["Skin Boosters", "Vitamin Injections", "Facials", "Aesthetic Treatments"]} />
+      <TreatmentSection />
       <Cards id="nutrition" title={c.nutritionTitle} items={["Nutrition Consultation", "Wellness Support", "Healthy Lifestyle Plan"]} />
       <Cards id="packages" title={c.packagesTitle} items={["Glow Package", "Skin & Wellness Package", "Confidence Package"]} />
       <Section id="faq" title={c.faqTitle} text="More information coming soon." />
@@ -157,6 +157,94 @@ function Cards({ id, title, items }) {
           </div>
         ))}
       </div>
+    </section>
+  );
+}
+function TreatmentSection() {
+  const categories = [
+    {
+      title: "Aesthetic Injectables & Skin Regeneration",
+      items: [
+        ["Anti-Wrinkle Injections", "from £100"],
+        ["RF Microneedling", "from £200"],
+        ["Skin Rejuvenation Mesotherapy", "from £170"],
+        ["Under Eye Mesotherapy", "from £100"],
+        ["PRP Vampire Facial", "from £220"],
+        ["PRF Advanced Regeneration", "from £120"],
+        ["Medical Microneedling Therapy", "from £100"]
+      ]
+    },
+    {
+      title: "Skin Treatments & Facials",
+      items: [
+        ["Diamond Glow Microdermabrasion", "from £60"],
+        ["Deep Hydrogen Skin Cleanse", "from £90"],
+        ["Advanced Chemical Peels", "from £75"],
+        ["Cavitation Skin Peel", "from £30"],
+        ["Deep Pore Skin Cleansing", "from £55"],
+        ["Growth Factor Skin Therapy", "from £80"],
+        ["Non-Needle Glow Mesotherapy", "from £70"]
+      ]
+    },
+    {
+      title: "Hair Restoration",
+      items: [["PRP Hair Restoration Therapy", "from £220"]]
+    },
+    {
+      title: "Body Contouring & Wellness",
+      items: [
+        ["Body Pressure Therapy", "£50"],
+        ["Body Microdermabrasion Treatment", "£70"]
+      ]
+    },
+    {
+      title: "Brows & Beauty",
+      items: [
+        ["Luxury Brow Tint", "from £25"],
+        ["Powder Henna Brows", "£35"]
+      ]
+    }
+  ];
+
+  return (
+    <section id="treatments" style={{ maxWidth: 1100, margin: "0 auto", padding: "60px 24px" }}>
+      <h2 style={{ fontFamily: "Georgia, serif", fontSize: 42 }}>
+        Treatments
+      </h2>
+
+      <p style={{ fontSize: 18, lineHeight: 1.8, maxWidth: 760, color: "rgba(255,255,255,.72)" }}>
+        A curated selection of aesthetic, skin, body and beauty treatments designed to support natural-looking results and confidence.
+      </p>
+
+      {categories.map((category) => (
+        <div key={category.title} style={{ marginTop: 42 }}>
+          <h3 style={{ color: "#d4af37", fontSize: 24, marginBottom: 18 }}>
+            {category.title}
+          </h3>
+
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(240px,1fr))", gap: 22 }}>
+            {category.items.map(([name, price]) => (
+              <div
+                key={name}
+                style={{
+                  background: "rgba(255,255,255,.05)",
+                  border: "1px solid rgba(212,175,55,.18)",
+                  borderRadius: 24,
+                  padding: 26
+                }}
+              >
+                <h4 style={{ fontSize: 20, marginBottom: 12 }}>
+                  {name}
+                </h4>
+
+                <p style={{ color: "#d4af37", fontWeight: 700 }}>
+                  {price}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
     </section>
   );
 }
