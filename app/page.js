@@ -144,25 +144,48 @@ export default function Home() {
                 backdropFilter: "blur(12px)"
               }}
             >
-              <h3
-                style={{
-                  marginBottom: 14,
-                  fontSize: 24,
-                  fontWeight: 500
-                }}
-              >
-                {item}
-              </h3>
+          <div
+  style={{
+    width: 54,
+    height: 54,
+    borderRadius: "50%",
+    background: "rgba(212,175,55,.14)",
+    marginBottom: 20,
+    border: "1px solid rgba(212,175,55,.2)"
+  }}
+/>
 
-              <p
-                style={{
-                  color: "rgba(255,255,255,.72)",
-                  lineHeight: 1.7
-                }}
-              >
-                Luxury personalised treatments designed for natural and elegant
-                results.
-              </p>
+<h3
+  style={{
+    marginBottom: 12,
+    fontSize: 26,
+    fontWeight: 500,
+    fontFamily: "Georgia, serif"
+  }}
+>
+  {item}
+</h3>
+
+<p
+  style={{
+    color: "rgba(255,255,255,.72)",
+    lineHeight: 1.8,
+    marginBottom: 18
+  }}
+>
+  Premium personalised treatments focused on natural beauty, skin health
+  and confidence.
+</p>
+
+<div
+  style={{
+    color: "#d4af37",
+    fontWeight: 700,
+    letterSpacing: ".04em"
+  }}
+>
+  From £99
+</div>
             </div>
           ))}
         </div>
