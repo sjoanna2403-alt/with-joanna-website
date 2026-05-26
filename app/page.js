@@ -484,7 +484,7 @@ export default function Home() {
         </p>
 
         <a
-          href="https://wa.me/"
+          href="https://wa.me/447492828818?text=Hi%20Joanna,%20I%20would%20like%20to%20book%20a%20consultation."
           target="_blank"
           rel="noreferrer"
           style={{ ...styles.button, marginTop: 20 }}
