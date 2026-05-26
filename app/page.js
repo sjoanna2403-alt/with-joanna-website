@@ -268,7 +268,7 @@ export default function Home() {
               marginBottom: 18
             }}
           >
-            CONTACT TEST
+            Book Your Consultation
           </h2>
 
           <p
