@@ -8,7 +8,33 @@ export default function Home() {
         color: "#f8f4ea",
         fontFamily: "Arial, sans-serif"
       }}
-    >
+<nav
+  style={{
+    maxWidth: 1100,
+    margin: "0 auto",
+    padding: "24px",
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    flexWrap: "wrap",
+    gap: 16
+  }}
+>
+  <strong style={{ color: "#d4af37", fontSize: 20 }}>
+    With Joanna Beauty
+  </strong>
+
+  <div style={{ display: "flex", gap: 18, flexWrap: "wrap" }}>
+    <a href="#about">About</a>
+    <a href="#treatments">Treatments</a>
+    <a href="#nutrition">Nutrition</a>
+    <a href="#packages">Packages</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>    
+>
+    
       <section
         style={{
           maxWidth: 1100,
