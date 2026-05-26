@@ -7,7 +7,6 @@ const styles = {
     minHeight: "100vh",
     background: "linear-gradient(135deg, #071f18 0%, #0b2f24 45%, #03120e 100%)",
     color: "#f8f4ea",
-    fontFamily: "Arial, sans-serif",
   },
   container: {
     maxWidth: 1100,
