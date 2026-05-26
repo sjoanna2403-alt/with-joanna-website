@@ -5,8 +5,7 @@ import { useState } from "react";
 const styles = {
   page: {
     minHeight: "100vh",
-    background:
-  "radial-gradient(circle at top left, rgba(34,74,60,.9), transparent 35%), radial-gradient(circle at bottom right, rgba(12,45,35,.9), transparent 30%), linear-gradient(135deg, #03110d 0%, #0f2f26 40%, #071b16 100%)",
+   background: "red",
   backgroundAttachment: "fixed",  
   color: "#f8f4ea",
   },
