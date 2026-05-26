@@ -115,7 +115,73 @@ export default function Home() {
         </div>
       </section>
 
-      <Section id="about" title={c.aboutTitle} text={c.aboutText} />
+     <section
+  id="about"
+  style={{
+    maxWidth: 1100,
+    margin: "0 auto",
+    padding: "60px 24px"
+  }}
+>
+  <h2
+    style={{
+      fontFamily: "Georgia, serif",
+      fontSize: 42,
+      marginBottom: 24
+    }}
+  >
+    About Joanna
+  </h2>
+
+  <div
+    style={{
+      background: "rgba(255,255,255,.05)",
+      border: "1px solid rgba(212,175,55,.18)",
+      borderRadius: 28,
+      padding: 36,
+      maxWidth: 900
+    }}
+  >
+    <p
+      style={{
+        fontSize: 18,
+        lineHeight: 1.9,
+        color: "rgba(255,255,255,.82)"
+      }}
+    >
+      With Joanna Beauty was created from a passion for aesthetics, skin
+      health and holistic wellbeing. Since 2020, Joanna has been helping
+      clients feel more confident through personalised treatments designed
+      to enhance natural beauty in a safe and professional environment.
+    </p>
+
+    <p
+      style={{
+        fontSize: 18,
+        lineHeight: 1.9,
+        color: "rgba(255,255,255,.82)",
+        marginTop: 22
+      }}
+    >
+      Joanna holds accredited certifications across a wide range of
+      aesthetic and skin treatments and is currently completing Level 4,
+      5 and 7 Aesthetics qualifications, alongside a Diploma in Nutrition.
+    </p>
+
+    <p
+      style={{
+        fontSize: 18,
+        lineHeight: 1.9,
+        color: "rgba(255,255,255,.82)",
+        marginTop: 22
+      }}
+    >
+      Combining advanced aesthetic treatments with a holistic wellness
+      approach, With Joanna Beauty focuses on confidence, balance, skin
+      health and long-term results.
+    </p>
+  </div>
+</section>
       <TreatmentSection />
      <section
   id="nutrition"
