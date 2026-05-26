@@ -8,6 +8,15 @@ html {
 
 body {
   margin: 0;
+  font-family: var(--font-montserrat), Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+strong {
+  font-family: var(--font-playfair), Georgia, serif;
 }
 
 a,
