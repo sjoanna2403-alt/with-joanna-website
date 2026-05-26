@@ -142,7 +142,20 @@ export default function Page() {
         </div>
       </nav>
 
-      <section style={{ maxWidth: 1100, margin: "0 auto", padding: "84px 24px 72px" }}>
+      <section
+  style={{
+    maxWidth: 1100,
+    margin: "40px auto",
+    padding: "110px 40px 100px",
+    borderRadius: 36,
+    background:
+      "linear-gradient(135deg, rgba(7,31,24,0.96), rgba(11,47,36,0.92))",
+    border: "1px solid rgba(212,175,55,.18)",
+    boxShadow: "0 30px 80px rgba(0,0,0,.35)",
+    position: "relative",
+    overflow: "hidden"
+  }}
+>
         <div
           style={{
             display: "inline-block",
