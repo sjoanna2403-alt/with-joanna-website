@@ -217,18 +217,45 @@ export default function Page() {
         </div>
       </section>
 
-      <section style={{ maxWidth: 1100, margin: "0 auto", padding: "0 24px 72px" }}>
-        <h2 style={{ fontFamily: "Georgia, serif", fontWeight: 400, fontSize: 40 }}>
-          {c.treatmentsTitle}
-        </h2>
+<section
+  style={{
+    maxWidth: 1100,
+    margin: "40px auto",
+    padding: "90px 40px",
+    borderRadius: 36,
+    position: "relative",
+    overflow: "hidden",
+    background:
+      "linear-gradient(135deg, rgba(7,31,24,0.95), rgba(11,47,36,0.92))",
+    border: "1px solid rgba(212,175,55,.18)",
+    boxShadow: "0 30px 80px rgba(0,0,0,.35)"
+  }}
+>
+  <div
+    style={{
+      position: "absolute",
+      top: -120,
+      right: -120,
+      width: 320,
+      height: 320,
+      borderRadius: "50%",
+      background: "rgba(212,175,55,.12)",
+      filter: "blur(80px)"
+    }}
+  />
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit,minmax(240px,1fr))",
-            gap: 18
-          }}
-        >
+  <div
+    style={{
+      position: "absolute",
+      bottom: -100,
+      left: -100,
+      width: 260,
+      height: 260,
+      borderRadius: "50%",
+      background: "rgba(255,255,255,.04)",
+      filter: "blur(70px)"
+    }}
+  />
           {c.treatments.map(([title, desc]) => (
             <div
               key={title}
