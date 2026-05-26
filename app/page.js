@@ -117,7 +117,82 @@ export default function Home() {
 
       <Section id="about" title={c.aboutTitle} text={c.aboutText} />
       <TreatmentSection />
-      <Cards id="nutrition" title={c.nutritionTitle} items={["Nutrition Consultation", "Wellness Support", "Healthy Lifestyle Plan"]} />
+     <section
+  id="nutrition"
+  style={{
+    maxWidth: 1100,
+    margin: "0 auto",
+    padding: "60px 24px"
+  }}
+>
+  <h2
+    style={{
+      fontFamily: "Georgia, serif",
+      fontSize: 42,
+      marginBottom: 18
+    }}
+  >
+    Nutrition & Wellness
+  </h2>
+
+  <p
+    style={{
+      fontSize: 18,
+      lineHeight: 1.8,
+      maxWidth: 760,
+      color: "rgba(255,255,255,.72)",
+      marginBottom: 34
+    }}
+  >
+    A holistic approach to beauty and wellbeing, supporting confidence,
+    healthy lifestyle habits and wellness from within.
+  </p>
+
+  <div
+    style={{
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fit,minmax(240px,1fr))",
+      gap: 22
+    }}
+  >
+    {[
+      "Skin & Gut Health",
+      "Women’s Wellness",
+      "Healthy Lifestyle Support",
+      "Weight Management Guidance"
+    ].map((item) => (
+      <div
+        key={item}
+        style={{
+          background: "rgba(255,255,255,.05)",
+          border: "1px solid rgba(212,175,55,.18)",
+          borderRadius: 24,
+          padding: 28
+        }}
+      >
+        <h3
+          style={{
+            fontSize: 24,
+            marginBottom: 12,
+            fontFamily: "Georgia, serif"
+          }}
+        >
+          {item}
+        </h3>
+
+        <p
+          style={{
+            color: "rgba(255,255,255,.72)",
+            lineHeight: 1.7
+          }}
+        >
+          Personalised wellness-focused support tailored to your goals and
+          lifestyle.
+        </p>
+      </div>
+    ))}
+  </div>
+</section>
       <Cards id="packages" title={c.packagesTitle} items={["Glow Package", "Skin & Wellness Package", "Confidence Package"]} />
       <Section id="faq" title={c.faqTitle} text="More information coming soon." />
       <Section id="contact" title={c.contactTitle} text="Contact via WhatsApp to ask a question or arrange a consultation." />
