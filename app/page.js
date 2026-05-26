@@ -73,7 +73,7 @@ export default function Home() {
             marginBottom: 22
           }}
         >
-          Natural Beauty. Advanced Aesthetics. Personal Care.
+          Natural Beauty. Advanced Aesthetics. Personal Care. / Naturalne piękno. Nowoczesna estetyka. Indywidualna opieka.
         </h1>
 
         <p
