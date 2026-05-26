@@ -268,7 +268,7 @@ export default function Home() {
               marginBottom: 18
             }}
           >
-            Contact
+            CONTACT TEST
           </h2>
 
           <p
