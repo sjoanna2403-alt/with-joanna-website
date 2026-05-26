@@ -404,7 +404,75 @@ export default function Home() {
           </div>
         ))}
       </section>
+<section
+  style={{
+    maxWidth: 1100,
+    margin: "0 auto",
+    padding: "60px 24px",
+  }}
+>
+  <div
+    style={{
+      background: "rgba(255,255,255,.05)",
+      border: "1px solid rgba(212,175,55,.18)",
+      borderRadius: 32,
+      padding: 40,
+      textAlign: "center",
+    }}
+  >
+    <p
+      style={{
+        color: "#d4af37",
+        letterSpacing: ".18em",
+        marginBottom: 12,
+      }}
+    >
+      INSTAGRAM
+    </p>
 
+    <h2
+      style={{
+        fontFamily: "Georgia, serif",
+        fontSize: 42,
+        marginBottom: 18,
+      }}
+    >
+      Follow With Joanna Beauty
+    </h2>
+
+    <p
+      style={{
+        maxWidth: 700,
+        margin: "0 auto",
+        lineHeight: 1.8,
+        color: "rgba(255,255,255,.72)",
+        fontSize: 18,
+      }}
+    >
+      Follow for aesthetic treatments, skin confidence, wellness inspiration
+      and behind-the-scenes content from With Joanna Beauty.
+    </p>
+
+    <a
+      href="https://instagram.com/"
+      target="_blank"
+      rel="noreferrer"
+      style={{
+        display: "inline-block",
+        marginTop: 30,
+        padding: "14px 28px",
+        borderRadius: 999,
+        border: "1px solid rgba(212,175,55,.4)",
+        background: "rgba(212,175,55,.12)",
+        color: "#f8f4ea",
+        textDecoration: "none",
+        fontWeight: 700,
+      }}
+    >
+      @withjoannabeauty
+    </a>
+  </div>
+</section>
       <section id="contact" style={styles.container}>
         <h2 style={{ fontFamily: "Georgia, serif", fontSize: 42 }}>
           {c.contactTitle}
