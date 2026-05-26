@@ -5,9 +5,9 @@ import { useState } from "react";
 const styles = {
   page: {
     minHeight: "100vh",
-   background: "red",
-  backgroundAttachment: "fixed",  
-  color: "#f8f4ea",
+    background: "red",
+    backgroundAttachment: "fixed",
+    color: "#f8f4ea",
   },
   container: {
     maxWidth: 1100,
